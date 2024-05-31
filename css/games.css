@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #2a2b30;
+}
+header img {
+    width: 60px;
+    transition: transform 0.5s ease; /* Adiciona uma transição suave para a propriedade transform */
+}
+
+header img:hover {
+    animation: spin-zoom 2s linear infinite; /* Inicia a animação combinada de rotação e zoom */
+}
+
+@keyframes spin-zoom {
+    0% {
+        transform: scale(1) rotate(0deg); /* Tamanho aumentado e rotação inicial */
+    }
+    50% {
+        transform: scale(1.3) rotate(180deg); /* Meio da animação: tamanho aumentado e rotação parcial */
+    }
+    100% {
+        transform: scale(1) rotate(360deg); /* Fim da animação: tamanho de volta ao normal e rotação completa */
+    }
+}
+
+
+
+.logo {
+    cursor: pointer;
+
+}
+li, a, .contato {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252A;
+}
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+.nav_links li a:hover {
+    color: #0088a9;
+    transition: all 0.3s ease 0s;
+}
+.nav_links li:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+.nav_links li a:hover {
+    color: #0088a9;
+    transform: scale(2); /* Aumenta o tamanho do texto */
+}
+.contato {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.contato:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    background-color: #24252A   ;
+    box-shadow:15px 15px 20px rgba(0, 0, 0, 0.3);   
+    transition: all .5s ease-in-out;
+    box-sizing: 25px 25px rgba(255,255,255,1);
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.highScore {
+    display: flex;
+    flex-direction: column;
+}
+.ponto {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.pontuacao {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    color: rgb(18, 180, 221);
+    font-weight: 700;
+    margin-right: 5px;
+}
+.coluna1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.texto {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;  
+}
+.photocard {
+    background-color: #2a2b30;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.card .photo {
+    height: 30px;
+}
+.card .icon {
+    height: 20px;
+}
+
+.name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;   
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+.desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 300; 
+    width: 300px;
+    height: auto;
+}
+.play {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.teste {
+    background-color:#2a2b30;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.089); 
+}
+.teste img {
+    width: 25px;
+}

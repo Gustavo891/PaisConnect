@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PaisConnect - Jogos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/games.css">
+        <link rel="icon" href="../assets/images/earth_1.png" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <img src="../assets/images/earth_1.png" alt="logo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Países</a></li>
+                    <li><a href="index.html">Mapa</a></li>
+                    <li><a href="games.html">Jogos</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+            </nav>
+            <a href=""><button class="contato">Contato</button></a>
+        </header>
+        <section class="main">
+            <div class="card">
+                    <div class="row">
+                        <div class="coluna1">
+                            <div class="photocard"><img class="photo" src="../assets/images/red-flag.png" alt=""></div>
+                            <div class="name">QUAL A BANDEIRA?</div>
+                        </div>
+                        <div class="highScore">
+                            <div class="texto">Máxima</div>
+                            <div class="ponto">
+                                <div id="highScore" class="pontuacao"></div>
+                                <img class="icon" src="../assets/images/trophy.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="play">
+                        <div class="desc">Um jogo onde você tem que adivinhar de qual país é a bendeira da imagem.</div>
+                        <button onclick="jogoBandeiras()" class="teste"><img src="../assets/images/play (1).png" alt=""></button>
+                    </div>
+            </div>
+        </section>
+        <script src="/javascript/games.js" async defer></script>
+    </body>
+</html>

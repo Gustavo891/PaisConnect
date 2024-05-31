@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*---------------------- NAVBAR  ----------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #2a2b30;
+}
+header img {
+    width: 60px;
+    transition: transform 0.5s ease; /* Adiciona uma transição suave para a propriedade transform */
+}
+
+header img:hover {
+    animation: spin-zoom 2s linear infinite; /* Inicia a animação combinada de rotação e zoom */
+}
+
+@keyframes spin-zoom {
+    0% {
+        transform: scale(1) rotate(0deg); /* Tamanho aumentado e rotação inicial */
+    }
+    50% {
+        transform: scale(1.3) rotate(180deg); /* Meio da animação: tamanho aumentado e rotação parcial */
+    }
+    100% {
+        transform: scale(1) rotate(360deg); /* Fim da animação: tamanho de volta ao normal e rotação completa */
+    }
+}
+
+
+.logo {
+    cursor: pointer;
+
+}
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252A;
+}
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+.nav_links li a:hover {
+    color: #0088a9;
+    transition: all 0.3s ease 0s;
+}
+.nav_links li:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+.nav_links li a:hover {
+    color: #0088a9;
+    transform: scale(2); /* Aumenta o tamanho do texto */
+}
+.contato {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.contato:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/*---------------------- MAIN ----------------------*/
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    background-color: #24252A   ;
+    box-shadow:15px 15px 20px rgba(0, 0, 0, 0.3);   
+    transition: all .5s ease-in-out;
+    box-sizing: 25px 25px rgba(255,255,255,1);
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 450px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column; /* Organiza os botões em coluna */
+    align-items: flex-start; /* Alinha os botões à esquerda */
+    gap: 15px;
+}
+.option {
+    background-color: #2a2b30;
+    border: 0;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: #111827;
+    width: 100%;
+    text-align: start;
+    cursor: pointer;
+    height: 40px;
+    touch-action: manipulation;
+    padding-left: 20px;
+    color: white;
+}
+
+.option:hover {
+  border: 2px solid #838383;
+}
+
+.option:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.option:focus-visible {
+  box-shadow: none;
+}
+
+#flag-container {
+    border-radius: 0.4rem;
+    background-color: #2a2b30;
+    padding: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+#flag {
+    width: 360px;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.384);
+}
+
+.carregando {
+    width: 350px;
+    height: 233px;
+    background-color: #41455a;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading-spinner {
+    border: 4px solid rgba(199, 199, 199, 0.1);
+    border-left-color: #acacac;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    display: inline-block; /* Adicionando display inline-block */
+    z-index: 1;
+}
+.partida-info {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+}
+
+.divider {
+    width: 2px;
+    height: auto;
+    background-color: #444444;
+}
+.ponto {
+    border-radius: 0.7rem;
+    background-color: #2a2b30;
+    width: 100%;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.ponto h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: white;
+    font-weight: 400; 
+}
+.pontos, .high {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    color: rgb(18, 180, 221);
+    font-weight: 700;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.prox {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#next-button {
+    border-radius: .2rem;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+    background-color: #838383;
+    width: 200px;
+    height: 50px;
+}
+
+.perdeu {
+    padding: 40px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.perdeu img {
+    width: 200px;
+}
+.perdeu h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 60px;
+    color: white;
+    font-weight: 800;
+}
+
+.resultado {
+    background-color: #2a2b30;
+    border: 0;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: #111827;
+    width: 100%;
+    height: 60px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado img {
+    width: 30px;
+    margin-right: 10px;
+}
+.resultado h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.perdeu button {
+    border-radius: .2rem;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+    background-color: #838383;
+    width: 200px;
+    height: 50px;
+}

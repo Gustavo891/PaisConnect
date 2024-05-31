@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaisConnect - Jogo de Bandeiras</title>
+    <link rel="stylesheet" href="/css/flag.css">
+    <link rel="icon" href="../assets/images/earth_1.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="../assets/images/earth_1.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Países</a></li>
+                <li><a href="index.html">Mapa</a></li>
+                <li><a href="games.html">Jogos</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+        <a href=""><button class="contato">Contato</button></a>
+    </header>
+    <section class="main">
+        <div class="card">
+            <div class="perdeu" style="display: none;">
+                <img src="../assets/images/loser.png" alt="">
+                <h1>DERROTA</h1>
+                <div class="resultado">
+                    <img src="../assets/images/placeholder (1).png" alt="">
+                    <h2 class="pontuacao">0 bandeiras corretas</h2>
+                </div>
+                <button onclick="restartGame()">Jogar Novamente</button>
+            </div>
+            <div id="game-container">
+                <div class="ponto">
+                    <div class="partida-info">
+                        <img class="icon" src="../assets/images/score.png" alt="">
+                        <div class="atual">
+                            <h2>Pontuação:</h2>
+                            <div class="pontos"></div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="partida-info">
+                        <img class="icon" src="../assets/images/trophy.png" alt="">
+                        <div class="max">
+                            <h2>Máxima:</h2>
+                            <div id="highScoreDisplay" class="high">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flag-container">
+                    <div class="carregando">
+                        <div id="loading-spinner"></div>
+                    </div>
+                    <img id="flag" src="" alt="Flag">
+                </div>
+                <div id="options-container">
+                    <button class="option" onclick="checkAnswer(this)"></button>
+                    <button class="option" onclick="checkAnswer(this)"></button>
+                    <button class="option" onclick="checkAnswer(this)"></button>
+                    <button class="option" onclick="checkAnswer(this)"></button>
+                </div>
+                <div id="result"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="/javascript/flag.js"></script>
+</body>
+
+</html>

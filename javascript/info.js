@@ -72,7 +72,8 @@ function funFlag(countryData) {
     imageinfo.src = countryData.flags.png;
     paisImg.src = countryData.coatOfArms.svg;
     let translationFound = false;
-    translate(countryData.flags.alt)
+    texto.textContent = countryData.flags.alt;
+/*     translate(countryData.flags.alt)
         .then(traducao => {
             for (const match of traducao.matches) {
                 if (countryData.flags.alt !== match.translation) {
@@ -88,7 +89,7 @@ function funFlag(countryData) {
         .catch(error => {
             console.error('Erro ao traduzir:', error);
             texto.textContent = countryData.flags.alt; // Em caso de erro, use o nome original da moeda
-        });
+        }); */
 }
 
 function fetchCountryData(nomePais) {
@@ -105,24 +106,7 @@ function fetchCountryData(nomePais) {
         });
 }
 function funCapital(capital) {
-    let translationFound = false;
-    translate(capital)
-        .then(traducao => {
-            for (const match of traducao.matches) {
-                if (capital !== match.translation) {
-                    capitalDesc.textContent = match.translation;
-                    translationFound = true;
-                    break; // Sai completamente do loop quando a condição é satisfeita
-                }
-            }
-            if(translationFound == false) {
-                capitalDesc.textContent = traducao.responseData.translatedText;
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao traduzir:', error);
-            capitalDesc.textContent = capital; // Em caso de erro, use o nome original da moeda
-        });
+    capitalDesc.textContent = capital;
 }
 function funContinente(continentes) {
     tamanho = 0;

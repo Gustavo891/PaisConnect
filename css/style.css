@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 html {
     scroll-behavior: smooth;
@@ -92,13 +94,12 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 900px;
+    height: 1100px;
     background-image: url(../assets/images/walpaper2.jpg);
     background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
     background-position: center; /* Centraliza a imagem no elemento */
     background-repeat: no-repeat; /* Evita que a imagem seja repetida */
 }
-
 .main .conteudo h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
@@ -113,10 +114,7 @@ button:hover {
     color: white;
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
-
 /*---------------------- MAPA ----------------------*/
-
-
 .mapa {
     background-color: #24252A;
     border-top: #26272b 1px solid;
@@ -130,7 +128,6 @@ button:hover {
     color: white;
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
 }
-
 .mapa .infomapa h3{
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
@@ -151,7 +148,6 @@ svg path:hover {
     transition: 0.6s;
     cursor: pointer;
 }
-
 #tooltip {
     position: absolute;
     font-family: "Montserrat", sans-serif;
@@ -169,9 +165,63 @@ svg path:hover {
     height: auto;
     margin-right: 10px;
   }
-
-
 /*---------------------- MAPA ----------------------*/
 .info {
     height: 400px;
+}
+
+
+::placeholder {
+    color: #26272b;
+}
+.search-box {
+    position: relative;
+    width: 600px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+input {
+    flex: 1;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: #2a2b30;
+}
+.result-box {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    border-radius: 10px;
+    left: 0;
+    top: calc(100% + 5px);
+    background-color: white;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.result-box ul {
+    margin-top: 5px;
+    padding: 15px 10px;
+}
+.result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    color: #26272b;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.result-box li:hover {
+    background-color: #ececec80;
+}
+.result-box img {
+    width: 30px;
 }

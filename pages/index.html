@@ -20,23 +20,32 @@
         <img src="../assets/images/earth_1.png" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Países</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#pesquisa">Países</a></li>
                 <li><a href="#mapa">Mapa</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="games.html">Jogos</a></li>
+                <li><a href="">Sobre</a></li>
             </ul>
         </nav>
         <a href=""><button>Contato</button></a>
     </header>
 
     <section class="main">
-        <div class="conteudo">
+        <div id="pesquisa" class="conteudo">
             <h1 class="pais-connect">
                 PAÍS CONNECT
             </h1>
             <h3 class="um-guia-de-informaes-sobre-pases">
                 Um guia de informações sobre países.
             </h3>
+            <div class="search-box">
+                <div class="row">
+                    <input class="inputbox" type="text" name="" id="input-box" placeholder="Pequise um país." autocomplete="off">
+                    <button onclick="search()" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="result-box">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1527,8 +1536,15 @@
         </div>
     </section>
     <section class="info"></section>
+    <script>
+        function selectInput(countryName) {
+            document.getElementById('inputBox').value = countryName;
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/c03f817d39.js" crossorigin="anonymous"></script>
     <script src="../javascript/script.js"></script>
     <script src="../javascript/page.js"></script>
+    <script src="../javascript/pesquisa.js"></script>
 </body>
 
 </html>
