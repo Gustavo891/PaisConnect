@@ -59,7 +59,7 @@ Acho que você já ouviu falar de jogos como: Termo, Wordle, Globle, etc... Ent�
     | 🏙️ **4** | A capital do país.      |
     | 🪙 **5** | A moeda mais utilizada no país.      |
 
-- Assim como o primeiro jogo, a guia de informações mostra sua pontuação (quantos países você acertou) e seu recorde geral. Também suas vidas em corações, cujo a cada erro, eles se tornam cinza, simbolizando que você o perdeu.
+- Assim como o primeiro jogo, a guia de informações mostra sua pontuação (quantos países você acertou) e seu recorde geral. Também suas vidas em corações, cujo a cada erro, eles se tornam cinza, simbolizando que você o perdeu.<br/>
   <img style="width: 500px;" src="https://github.com/Gustavo891/PaisConnect/assets/86622386/3ab781f9-f473-4fb7-a180-096125acade3" alt="">
 
 ## 👨‍💻 Processo de desenvolvimento.
