@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaisConnect - Jogo de Bandeiras</title>
+    <link rel="stylesheet" href="/css/guess.css">
+    <link rel="icon" href="../assets/images/earth_1.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="../assets/images/earth_1.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Países</a></li>
+                <li><a href="index.html">Mapa</a></li>
+                <li><a href="games.html">Jogos</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </nav>
+        <a href=""><button class="contato">Contato</button></a>
+    </header>
+    <section class="main">
+        <h1 class="resultado">Acertou</h1>
+        <div class="card">
+            <div class="perdeu" style="display: none;">
+                <img src="../assets/images/loser.png" alt="">
+                <h1>DERROTA</h1>
+                <div class="resultado">
+                    <img src="../assets/images/earth_1.png" alt="">
+                    <h2 class="pontuacao">0 países corretos</h2>
+                </div>
+                <button onclick="novoJogo()">Jogar Novamente</button>
+            </div>
+            <div class="ponto">
+                <div class="partida-info">
+                    <img class="icon" src="../assets/images/score.png" alt="">
+                    <div class="atual">
+                        <h2>Pontuação:</h2>
+                        <div class="pontos">0</div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="partida-info">
+                    <img class="icon" src="../assets/images/trophy.png" alt="">
+                    <div class="max">
+                        <h2>Máxima:</h2>
+                        <div id="highScoreDisplay" class="high">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="vidas">
+                <img class="vida1" src="../assets/images/vida1.png" alt="">
+                <img class="vida2" src="../assets/images/vida1.png" alt="">
+                <img class="vida3" src="../assets/images/vida1.png" alt="">
+                <img class="vida4" src="../assets/images/vida1.png" alt="">
+                <img class="vida5" src="../assets/images/vida1.png" alt="">
+            </div>
+            <div class="cards">
+                <div class="card1 populacao">
+                    <img src="../assets/images/people.png" alt="">
+                    <h3 class="infoCard">População</h3>
+                    <div class="textoDiv">
+                        <h2 class="texto populacaoTexto"></h2>
+                    </div>
+                </div>
+                <div class="card1 continente">
+                    <img src="../assets/images/earth_1.png" alt="">
+                    <h3 class="infoCard">Continente</h3>
+                    <div class="textoDiv">
+                        <h2 class="texto continenteTexto"></h2>
+                    </div>
+                </div>
+                <div class="card1 lingua">
+                    <img src="../assets/images/language.png" alt="">
+                    <h3 class="infoCard">Lingua</h3>
+                    <div class="textoDiv">
+                        <h2 class="texto linguaTexto"></h2>
+                    </div>
+                </div>
+                <div class="card1 capital">
+                    <img src="../assets/images/capital.png" alt="">
+                    <h3 class="infoCard">Capital</h3>
+                    <div class="textoDiv">
+                        <h2 class="texto capitalTexto"></h2>
+                    </div>
+                </div>
+                <div class="card1 moeda">
+                    <img src="../assets/images/money.png" alt="">
+                    <h3 class="infoCard">Dinheiro</h3>
+                    <div class="textoDiv">
+                        <h2 class="texto dinheiroTexto"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pesquisa" class="conteudo">
+            <div class="search-box">
+                <div class="row">
+                    <input class="inputbox" type="text" name="" id="input-box" placeholder="Advinhe o país."
+                        autocomplete="off">
+                    <button onclick="search()" class="search"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <div class="result-box">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function selectInput(countryName) {
+            document.getElementById('inputBox').value = countryName;
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/c03f817d39.js" crossorigin="anonymous"></script>
+    <script src="/javascript/guess.js"></script>
+</body>
+
+</html>

@@ -1,12 +1,3 @@
-let disponivel = [
-    'Brazil',
-    'United States',
-    'Spain',
-    'France',
-    'Portugal',
-    'Russia',
-];
-
 var countriesFlags = {"Afghanistan": {"mini": "http://flags.fmcdn.net/data/flags/mini/af.png", "normal": "http://flags.fmcdn.net/data/flags/normal/af.png"}, 
 "Albania": {"mini": "http://flags.fmcdn.net/data/flags/mini/al.png", "normal": "http://flags.fmcdn.net/data/flags/normal/al.png"}, 
 "Algeria": {"mini": "http://flags.fmcdn.net/data/flags/mini/dz.png", "normal": "http://flags.fmcdn.net/data/flags/normal/dz.png"}, 
